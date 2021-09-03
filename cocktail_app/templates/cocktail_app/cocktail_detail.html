@@ -1,0 +1,28 @@
+{% extends 'cockatail_app/base.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class = "container"> 
+    <br><br>
+    <div class="row"> 
+        <div class="col-md-5">
+          <br>
+          <img class="img-fluid" src="{{ drink.image_url }}" alt="" style = "width: 90%;">
+          <br><br>
+          <h3 class="card-title text-center ">{{ drink.name }}</h3>
+        </div> 
+        <div class="col-md-7 shadow-lg p-3 mb-5 bg-white rounded">
+          <h1 class="my-3"> Cocktail Description</h1>
+          <p class = "lead">{{ drink.instructions }}</p>
+          <p class = "lead">{{ drink.ingredients }}</p>
+          <p class = "lead">{{ drink.measures}}</p>
+          <h1 class="my-3"> Cocktail Details</h1>
+          <ul>
+            <li>{{ drink.category }}</li>
+          </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
